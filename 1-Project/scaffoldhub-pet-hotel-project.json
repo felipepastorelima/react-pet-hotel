@@ -1,0 +1,399 @@
+{
+  "entities": [
+    {
+      "id": "6c9d259a-ef62-4167-86bc-5181d20719c2",
+      "name": { "singular": "pet", "plural": null },
+      "label": { "singular": null, "plural": null },
+      "properties": {
+        "priority": 1,
+        "display": "6bdc2f8d-fe8f-4002-9c6d-911bc79cfefe"
+      },
+      "fields": [
+        {
+          "id": "5cfe00ad-e027-426e-9084-b66f64a38c51",
+          "name": { "singular": "owner", "plural": null },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "list": "yes",
+            "filter": "yes",
+            "exportable": "yes",
+            "priority": 1
+          },
+          "relation": {},
+          "validations": [
+            {
+              "id": "6211e89e-ed74-40c3-81dc-eb65afad66f3",
+              "key": "required",
+              "value": true
+            }
+          ],
+          "type": "user_one"
+        },
+        {
+          "id": "6bdc2f8d-fe8f-4002-9c6d-911bc79cfefe",
+          "name": { "singular": "name", "plural": null },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "text_html_type": "text",
+            "list": "yes",
+            "filter": "yes",
+            "exportable": "yes",
+            "priority": 2
+          },
+          "relation": {},
+          "validations": [
+            {
+              "id": "d6875334-2fe3-415c-ad51-3292b655180c",
+              "key": "required",
+              "value": true
+            },
+            {
+              "id": "4392f571-3e68-466d-bddf-ae9f8e05ba2d",
+              "key": "maxlength",
+              "value": 255
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "id": "cb468721-68fc-4119-a560-642610937e2e",
+          "name": { "singular": "size", "plural": null },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "enumerator_html_type": "select",
+            "list": "yes",
+            "filter": "yes",
+            "exportable": "yes",
+            "options": "small,medium,large",
+            "priority": 5
+          },
+          "relation": {},
+          "validations": [
+            {
+              "id": "752f3c68-9d14-49c1-979d-bbfc889488b0",
+              "key": "required",
+              "value": true
+            }
+          ],
+          "type": "enumerator"
+        },
+        {
+          "id": "e8c1f20d-c351-48a5-93f0-1afca84625da",
+          "name": {
+            "singular": "bookings",
+            "plural": null
+          },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "list": "no",
+            "exportable": "no",
+            "priority": 6
+          },
+          "relation": {
+            "entity": "c27996e1-bb78-4ca7-b843-e7dc8390cdea",
+            "two_way_field": "7128633f-15e3-4d66-bb51-89cf0b64cbdd"
+          },
+          "validations": [],
+          "type": "relation_many"
+        },
+        {
+          "id": "fe82a2d2-5854-48f8-bf98-19da18cdfdc6",
+          "name": { "singular": "breed", "plural": null },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "text_html_type": "text",
+            "list": "yes",
+            "filter": "yes",
+            "exportable": "yes",
+            "priority": 4
+          },
+          "relation": {},
+          "validations": [
+            {
+              "id": "4e5a2e89-a306-4466-a24a-ac9ff240e9b0",
+              "key": "required",
+              "value": true
+            },
+            {
+              "id": "a1f9b125-e1e3-4674-a45b-2179d09f0a74",
+              "key": "maxlength",
+              "value": 255
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "id": "75034794-aaec-473b-88ca-5c25011ed5a4",
+          "name": { "singular": "type", "plural": null },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "enumerator_html_type": "select",
+            "list": "yes",
+            "filter": "yes",
+            "exportable": "yes",
+            "priority": 3,
+            "options": "cat,dog"
+          },
+          "relation": {},
+          "validations": [
+            {
+              "id": "a71fdd99-f992-4af7-8763-9b5e715e7005",
+              "key": "required",
+              "value": true
+            }
+          ],
+          "type": "enumerator"
+        }
+      ]
+    },
+    {
+      "id": "c27996e1-bb78-4ca7-b843-e7dc8390cdea",
+      "name": { "singular": "booking", "plural": null },
+      "label": { "singular": null, "plural": null },
+      "properties": { "priority": 2, "display": "" },
+      "fields": [
+        {
+          "id": "2e9d1de0-3bd2-4ec5-ac92-456b9aea624e",
+          "name": { "singular": "owner", "plural": null },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "list": "yes",
+            "filter": "yes",
+            "exportable": "yes",
+            "priority": 1
+          },
+          "relation": {},
+          "validations": [
+            {
+              "id": "15ced578-ae17-4695-ae52-201f37f99430",
+              "key": "required",
+              "value": true
+            }
+          ],
+          "type": "user_one"
+        },
+        {
+          "id": "7128633f-15e3-4d66-bb51-89cf0b64cbdd",
+          "name": { "singular": "pet", "plural": null },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "list": "yes",
+            "filter": "yes",
+            "exportable": "yes",
+            "priority": 2
+          },
+          "relation": {
+            "entity": "6c9d259a-ef62-4167-86bc-5181d20719c2"
+          },
+          "validations": [
+            {
+              "id": "db5972f2-5a5e-4259-829c-0b55dc5212e8",
+              "key": "required",
+              "value": true
+            }
+          ],
+          "type": "relation_one"
+        },
+        {
+          "id": "d5faf407-d0f5-4757-94ec-9c6345a48b76",
+          "name": { "singular": "arrival", "plural": null },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "list": "yes",
+            "filter": "yes",
+            "exportable": "yes",
+            "priority": 3
+          },
+          "relation": {},
+          "validations": [
+            {
+              "id": "aac904bc-212e-47b1-ae0d-fd02aaf630a0",
+              "key": "required",
+              "value": true
+            }
+          ],
+          "type": "datetime"
+        },
+        {
+          "id": "e6e6517a-fdf1-40ba-98a4-e1c61f297d35",
+          "name": {
+            "singular": "departure",
+            "plural": null
+          },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "list": "yes",
+            "filter": "yes",
+            "exportable": "yes",
+            "priority": 4
+          },
+          "relation": {},
+          "validations": [
+            {
+              "id": "2f00619c-f79d-4b97-80f4-629d7f7423fb",
+              "key": "required",
+              "value": true
+            }
+          ],
+          "type": "datetime"
+        },
+        {
+          "id": "be0fdabb-b61d-42b2-8790-031510341443",
+          "name": {
+            "singular": "clientNotes",
+            "plural": null
+          },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "text_html_type": "textarea",
+            "list": "no",
+            "filter": "no",
+            "exportable": "yes",
+            "priority": 5
+          },
+          "relation": {},
+          "validations": [
+            {
+              "id": "3fd1b03a-e981-479d-9b26-bfd2d28486ed",
+              "key": "maxlength",
+              "value": 20000
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "id": "af902e76-6e13-4979-a38b-ee613fba3952",
+          "name": {
+            "singular": "employeeNotes",
+            "plural": null
+          },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "text_html_type": "textarea",
+            "list": "no",
+            "filter": "no",
+            "exportable": "yes",
+            "priority": 6
+          },
+          "relation": {},
+          "validations": [
+            {
+              "id": "81f0cfec-681b-437d-b5c9-8a5058df9b9d",
+              "key": "maxlength",
+              "value": 20000
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "id": "f52824e7-fd88-48d1-82cc-e64ea3b416b5",
+          "name": {
+            "singular": "photos",
+            "plural": null
+          },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "list": "no",
+            "exportable": "no",
+            "priority": 7
+          },
+          "relation": {},
+          "validations": [
+            {
+              "id": "07cdf9a7-2f10-4ae0-ad1b-907dfdb9d33f",
+              "key": "size",
+              "value": 3000000
+            }
+          ],
+          "type": "images"
+        },
+        {
+          "id": "957212b6-a604-47d7-bac5-ee3a95bfac3b",
+          "name": { "singular": "status", "plural": null },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "enumerator_html_type": "select",
+            "list": "yes",
+            "filter": "yes",
+            "exportable": "yes",
+            "priority": 8,
+            "options": "booked,progress,cancelled,completed"
+          },
+          "relation": {},
+          "validations": [
+            {
+              "id": "ead4451a-acdd-46f7-9935-1ab638c052eb",
+              "key": "required",
+              "value": true
+            }
+          ],
+          "type": "enumerator"
+        },
+        {
+          "id": "3e5cdd85-1066-4efc-9399-cab414d7a37c",
+          "name": {
+            "singular": "cancellationNotes",
+            "plural": null
+          },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "text_html_type": "textarea",
+            "list": "no",
+            "filter": "no",
+            "exportable": "yes",
+            "priority": 9
+          },
+          "relation": {},
+          "validations": [
+            {
+              "id": "ead4451a-acdd-46f7-9935-1ab638c052ea",
+              "key": "maxlength",
+              "value": 20000
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "id": "fb6bbd2d-b3f7-4ae4-9519-74cb07a587a5",
+          "name": { "singular": "fee", "plural": null },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "list": "yes",
+            "filter": "yes",
+            "exportable": "yes",
+            "priority": 10
+          },
+          "relation": {},
+          "validations": [
+            {
+              "id": "11b5bd6b-f912-4d89-9f07-547178e96c1d",
+              "key": "scale",
+              "value": 2
+            }
+          ],
+          "type": "decimal"
+        },
+        {
+          "id": "ed039d3f-cfa3-4244-a713-3fbcd3605c60",
+          "name": { "singular": "receipt", "plural": null },
+          "label": { "singular": null, "plural": null },
+          "properties": {
+            "list": "yes",
+            "exportable": "yes",
+            "priority": 11
+          },
+          "relation": {},
+          "validations": [
+            {
+              "id": "4912cc6d-c244-48b8-962c-30dcddc6abab",
+              "key": "size",
+              "value": 3000000
+            }
+          ],
+          "type": "files"
+        }
+      ]
+    }
+  ],
+  "properties": {}
+}
