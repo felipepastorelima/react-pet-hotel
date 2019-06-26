@@ -1,0 +1,15 @@
+{
+  "name": "basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1-basics.js",
+  "scripts": {
+    "start": "node 6-npm-modules.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "moment": "^2.24.0"
+  }
+}
