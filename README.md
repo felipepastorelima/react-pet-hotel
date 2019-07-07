@@ -7,7 +7,3 @@ The course uses ScaffoldHub.io (https://scaffoldhub.io) to create the initial ap
 DEMO: https://reactpethotel.com
 
 WEBPAGE: https://scaffoldhub.io/courses/react-pet-hotel
-
-CODE: https://github.com/felipepastorelima/react-pet-hotel
-
-CHAT: https://spectrum.chat/scaffoldhub
