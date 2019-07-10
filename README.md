@@ -9,7 +9,8 @@ Course Webpage: https://scaffoldhub.io/courses/react-pet-hotel
 ## Scaffold
 
 React Antd with SQL, MongoDB or Firebase Firestore
-Version: 1.0.1
+
+Version: **1.0.1**
 
 The ScaffoldHub project file needed to generate the application is at the 1-Project folder.
 
