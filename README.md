@@ -6,13 +6,13 @@ The course uses ScaffoldHub.io (https://scaffoldhub.io) to create the initial ap
 
 Course Webpage: https://scaffoldhub.io/courses/react-pet-hotel
 
-## Scaffold
+## Base Project
+
+The base project is at 1-Project folder.
 
 React Antd with SQL, MongoDB or Firebase Firestore
 
 Version: **1.0.4**
-
-The base projects are at 1-Project folder.
 
 ## Basics
 
