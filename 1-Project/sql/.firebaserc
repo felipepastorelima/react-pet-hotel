@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "development": "<insert project id here>",
+    "production": "<insert project id here>"
+  }
+}

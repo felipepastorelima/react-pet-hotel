@@ -1,0 +1,52 @@
+{
+  "name": "app-backend",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "nodemon ./server.js",
+    "logs": "firebase functions:log",
+    "test": "nodemon --exec 'cross-env NODE_ENV=test mocha ./src/**/*.test.js --exit || exit 1'",
+    "predeploy:development": "firebase use development && firebase functions:config:set env.value=\"development\"",
+    "deploy:development": "firebase deploy --only functions",
+    "deploy:appengine:development": "gcloud app deploy app-engine.development.yaml --project <insert project id here>",
+    "db:reset:development": "cross-env MIGRATION_ENV=development node ./migrations/reset",
+    "db:reset:localhost": "cross-env MIGRATION_ENV=localhost node ./migrations/reset",
+    "db:reset:production": "cross-env MIGRATION_ENV=production node ./migrations/reset",
+    "predeploy:production": "firebase use production && firebase functions:config:set env.value=\"production\"",
+    "deploy:production": "firebase deploy --only functions",
+    "deploy:appengine:production": "gcloud app deploy app-engine.production.yaml --project <insert project id here>"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "4.16.4",
+    "express-graphql": "0.7.1",
+    "firebase-admin": "7.0.0",
+    "firebase-functions": "2.2.0",
+    "graphql": "14.1.1",
+    "graphql-fields": "2.0.1",
+    "graphql-iso-date": "3.6.1",
+    "graphql-tools": "4.0.4",
+    "graphql-type-json": "0.2.1",
+    "lodash": "4.17.11",
+    "moment": "2.24.0",
+    "nodemailer": "5.1.1",
+    "mysql2": "1.6.5",
+    "pg": "7.8.1",
+    "pg-hstore": "2.3.2",
+    "sequelize": "4.42.1",
+    "sqlite": "3.0.2"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "private": true,
+  "devDependencies": {
+    "cross-env": "5.2.0",
+    "firebase-functions-test": "0.1.6",
+    "mocha": "6.0.2",
+    "node-mocks-http": "1.7.3",
+    "nodemon": "1.18.10",
+    "sequelize-cli": "5.4.0"
+  }
+}

@@ -12,7 +12,7 @@ React Antd with SQL, MongoDB or Firebase Firestore
 
 Version: **1.0.4**
 
-The ScaffoldHub project file needed to generate the application is at the 1-Project folder.
+The base projects are at 1-Project folder.
 
 ## Basics
 
