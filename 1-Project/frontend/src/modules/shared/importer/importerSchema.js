@@ -24,7 +24,7 @@ export default class ImporterSchema {
     const rowWithColumnNames = {};
 
     rowWithColumnNames._status = statuses.PENDING;
-    rowWithColumnNames._line = index + 2 /* 0 and header */;
+    rowWithColumnNames._line = index + 1 /* 0 and header */;
 
     this.fields.forEach((field, index) => {
       rowWithColumnNames[field.name] = row[index];
