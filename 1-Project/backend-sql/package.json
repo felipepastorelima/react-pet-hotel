@@ -34,7 +34,7 @@
     "mysql2": "1.6.5",
     "pg": "7.8.1",
     "pg-hstore": "2.3.2",
-    "sequelize": "4.42.1",
+    "sequelize": "5.21.2",
     "sqlite": "3.0.2"
   },
   "engines": {
