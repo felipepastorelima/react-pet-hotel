@@ -17,7 +17,7 @@
     "formik": "1.5.1",
     "graphql": "14.1.1",
     "history": "4.7.2",
-    "lodash": "4.17.11",
+    "lodash": "4.17.19",
     "md5": "2.2.1",
     "nprogress": "0.2.0",
     "query-string": "6.2.0",
